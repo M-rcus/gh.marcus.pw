@@ -1,4 +1,4 @@
-# Anonymity "Guide" (I guess)
+# Anonymity "Guide"
 
 Last updated: 2020-07-18 (UTC)
 
@@ -11,7 +11,7 @@ Last updated: 2020-07-18 (UTC)
 
 ## Table of Contents
 
-- [Anonymity "Guide" (I guess)](#anonymity-guide-i-guess)
+- [Anonymity "Guide"](#anonymity-guide)
   - [Disclaimer](#disclaimer)
   - [Table of Contents](#table-of-contents)
   - [Preface](#preface)
