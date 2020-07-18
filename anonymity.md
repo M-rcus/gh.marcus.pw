@@ -1,4 +1,4 @@
-# Anonymity Guide by Marcus
+# Anonymity "Guide" (I guess)
 
 Last updated: 2020-07-18 (UTC)
 
@@ -11,7 +11,7 @@ Last updated: 2020-07-18 (UTC)
 
 ## Table of Contents
 
-- [Anonymity Guide by Marcus](#anonymity-guide-by-marcus)
+- [Anonymity "Guide" (I guess)](#anonymity-guide-i-guess)
   - [Disclaimer](#disclaimer)
   - [Table of Contents](#table-of-contents)
   - [Preface](#preface)
