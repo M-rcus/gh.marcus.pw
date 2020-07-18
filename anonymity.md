@@ -1,6 +1,6 @@
 # Anonymity Guide by Marcus
 
-Last updated: 2020-07-15 (UTC)
+Last updated: 2020-07-18 (UTC)
 
 ## Disclaimer
 
