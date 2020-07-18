@@ -66,7 +66,8 @@ Useful features is having favorite VPN servers (which I often switch between) an
 
 #### My personal VPN recommendations:
 
-- [Mullvad](https://mullvad.net/)
+- [Mullvad](https://mullvad.net/) / [Mozilla VPN](https://vpn.mozilla.org/)
+    - The reason these are listed together is that Mozilla has partnered with Mullvad for their VPN service.
     - Supports OpenVPN and WireGuard (a different type of VPN technology).
     - Mullvad also has their own client that supports a killswitch as well.
 - [ProtonVPN](https://protonvpn.com/)
