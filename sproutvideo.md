@@ -16,7 +16,7 @@ If you're here months later, then I can't guarantee that this method still works
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Prerequisites](#prerequisites)
-    - [User Agent](#user-agent)
+    - [Your Browser's User Agent](#your-browsers-user-agent)
     - [Userscript](#userscript)
   - [1. Getting the version of youtube-dl we need](#1-getting-the-version-of-youtube-dl-we-need)
   - [2. Testing if the project works (at all)](#2-testing-if-the-project-works-at-all)
@@ -50,7 +50,7 @@ If you're here months later, then I can't guarantee that this method still works
 
 ## Prerequisites
 
-### User Agent
+### Your Browser's User Agent
 Here's your browser's user agent, which we will use later.
 
 <input disabled="1" type="text" id="user-agent" />
@@ -162,17 +162,15 @@ I'll _try my best_ to update this guide whenever necessary.
 [Violentmonkey]: https://violentmonkey.github.io/
 
 <script type="text/javascript">
-    document.addEventListener('load', () => {
-        /**
-        * User Agent stuff
-        */
-       const uaInput = document.querySelector('#user-agent');
-       uaInput.value = navigator.userAgent;
+    /**
+    * User Agent stuff
+    */
+    const uaInput = document.querySelector('#user-agent');
+    uaInput.value = navigator.userAgent;
 
-       const uaBtn = document.querySelector('#ua-copy');
-       uaBtn.onclick = () => {
-           uaInput.select();
-           document.execCommand('copy');
-       };
-    });
+    const uaBtn = document.querySelector('#ua-copy');
+    uaBtn.onclick = () => {
+        uaInput.select();
+        document.execCommand('copy');
+    };
 </script>
