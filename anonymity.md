@@ -114,7 +114,7 @@ You will still use the same computer, but you'll practically have a "window" int
 I personally run a Linux distribution (Xubuntu 18.04 as of right now), with a VPN killswitch (as mentioned in [chapter #1][CH-1]), but honestly any OS or distribution would work.  
 My Linux distribution isn't setup with anything in particular, other than the fact that I'm using a separate identity (username), in case my system gets compromised somehow.
 
-If you plan on trying out Linux as well, then any [flavor of Ubuntu](https://wiki.ubuntu.com/UbuntuFlavors) is generally safe to start off with.  
+If you plan on trying out Linux as well, then any [flavor of Ubuntu](https://ubuntu.com/download/flavours) is generally safe to start off with.  
 With that said, running Linux might not be the best idea unless you're already familiar with it. It can be a pain in the ass to deal with when it comes to being a desktop OS, but it's not the worst thing in the world.  
 You might not enjoy it all that much if you don't like tinkering and troubleshooting tech.
 
