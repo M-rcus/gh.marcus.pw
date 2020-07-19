@@ -162,15 +162,17 @@ I'll _try my best_ to update this guide whenever necessary.
 [Violentmonkey]: https://violentmonkey.github.io/
 
 <script type="text/javascript">
-    /**
-     * User Agent stuff
-     */
-    const uaInput = document.querySelector('#user-agent');
-    uaInput.value = navigator.userAgent;
+    document.addEventListener('load', () => {
+        /**
+        * User Agent stuff
+        */
+       const uaInput = document.querySelector('#user-agent');
+       uaInput.value = navigator.userAgent;
 
-    const uaBtn = document.querySelector('#ua-copy');
-    uaBtn.onclick = () => {
-        uaInput.select();
-        document.execCommand('copy');
-    };
+       const uaBtn = document.querySelector('#ua-copy');
+       uaBtn.onclick = () => {
+           uaInput.select();
+           document.execCommand('copy');
+       };
+    });
 </script>
