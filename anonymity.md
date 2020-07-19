@@ -108,12 +108,15 @@ I'll be honest, I don't really know if I wanna talk about them more. I actually 
 
 ### 4. Computer: Virtual Machine (VM)
 
-A Virtual Machine (or a VM) is practically speaking a separate operating system that runs on the same computer, in an isolated environment. It allows you to install another instance Windows or Linux and run it completely separate from the main computer (besides the hardware limits, but that's besides the point).
+A Virtual Machine (or a VM) is practically speaking a separate operating system that runs on the same computer, in an isolated environment. It allows you to install another instance of Windows or Linux and run it separate from the main operating system.  
+You will still use the same computer, but you'll practically have a "window" into a separate operating system that doesn't directly affect your main computer (besides usage of hardware like CPU, RAM, storage etc.).
 
-I personally run a Linux distribution (Xubuntu 18.04 as of right now), with a VPN killswitch (as mentioned in [chapter #1][CH-1]), but probably anything works tbh.  
-My Linux distribution isn't setup with anything in particular, other than the fact that I'm using a separate identity (username),  in case my system gets compromised somehow.
+I personally run a Linux distribution (Xubuntu 18.04 as of right now), with a VPN killswitch (as mentioned in [chapter #1][CH-1]), but honestly any OS or distribution would work.  
+My Linux distribution isn't setup with anything in particular, other than the fact that I'm using a separate identity (username), in case my system gets compromised somehow.
 
-With that said, running Linux might not be the best idea unless you're already familiar with it. It can be a pain in the ass to deal with when it comes to being a desktop OS, but it's not the worst thing in the world.
+If you plan on trying out Linux as well, then any [flavor of Ubuntu](https://wiki.ubuntu.com/UbuntuFlavors) is generally safe to start off with.  
+With that said, running Linux might not be the best idea unless you're already familiar with it. It can be a pain in the ass to deal with when it comes to being a desktop OS, but it's not the worst thing in the world.  
+You might not enjoy it all that much if you don't like tinkering and troubleshooting tech.
 
 ### 5. Accounts & Social Media: Separate _ALL_ your online accounts and create a separate identity.
 
