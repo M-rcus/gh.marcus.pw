@@ -22,6 +22,7 @@ If you're here months later, then I can't guarantee that this method still works
   - [2. Testing if the project works (at all)](#2-testing-if-the-project-works-at-all)
   - [3. Downloading a video from Sproutvideo](#3-downloading-a-video-from-sproutvideo)
   - [4. Downloading multiple videos (via text file)](#4-downloading-multiple-videos-via-text-file)
+  - [5. Edge cases: 403 Forbidden (Referer)](#5-edge-cases-403-forbidden-referer)
   - [Finale](#finale)
 
 ## Requirements
@@ -134,16 +135,29 @@ Downloading multiple videos is not that much harder than downloading one video, 
    3. **Full example**: `python youtube_dl/__main__.py --add-header "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0" -a sprout.txt`
 7. The download should start. This will take a while, as it only downloads one video at a time.
 
+## 5. Edge cases: 403 Forbidden (Referer)
+
+In some scenarios you may have videos that are give you a `403 Forbidden` error. These might only play if they are 'embedded' on the correct page.  
+The easiest way to test if this is the case, open the embed URL in a new tab **by copy/pasting** (NOT clicking) and see if you get this error:
+
+![Screenshot of referer error][Sprout-Referer-Error-SS]
+
+If you have an error like this, the easiest is to include another flag with your command:  
+`--referer https://blah-blah-blah.vids.io/` - where the `https://blah-blah-blah.vids.io/` is the original URL where you copied the embed URL from.  
+Usually it's not necessary to include the full URL and you can do it similar to my example.
+
 ## Finale
 
 And that's it! If everything has been done correctly (and the project isn't broken), then you now have a setup for downloading videos from Sproutvideo.  
-As I mentioned in the [Introduction](#introduction), this works 
+As I mentioned in the [Introduction](#introduction), this works at the time of writing, but no guarantees that it will in the future.  
+I'll _try my best_ to update this guide whenever necessary.
 
 [Git-SCM]: https://git-scm.com/
 [Git-Install-DO]: https://www.digitalocean.com/community/tutorials/how-to-contribute-to-open-source-getting-started-with-git
 [Python-DL]: https://www.python.org/downloads/
 [Python-Path-SS]: https://i.titty.stream/ss/2020-07-19_1wMAqC.png
 [Sprout-Embed-URL-US]: https://gist.github.com/M-rcus/8bba3d654767a6bfc8b8d83f1abb2ae9
+[Sprout-Referer-Error-SS]: https://i.titty.stream/ss/2020-07-19_Uv0IWg.png
 [Sprout-Video-Player-SS]: https://i.titty.stream/ss/2020-07-19_sIDkvG.png
 [Violentmonkey]: https://violentmonkey.github.io/
 
