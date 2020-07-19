@@ -53,8 +53,9 @@ If you're here months later, then I can't guarantee that this method still works
 ### Your Browser's User Agent
 Here's your browser's user agent, which we will use later.
 
+Click this input field to copy your user agent to clipboard.
+
 <input disabled="1" type="text" id="user-agent" />
-<button type="button" id="ua-copy">Copy to clipboard</button>
 
 ### Userscript
 
@@ -167,9 +168,7 @@ I'll _try my best_ to update this guide whenever necessary.
     */
     const uaInput = document.querySelector('#user-agent');
     uaInput.value = navigator.userAgent;
-
-    const uaBtn = document.querySelector('#ua-copy');
-    uaBtn.onclick = () => {
+    uaInput.onclick = () => {
         uaInput.select();
         document.execCommand('copy');
     };
