@@ -111,7 +111,7 @@ It's possible to download a list of videos in one command, but for testing purpo
    1. Page with the video player should look like [this screenshot][Sprout-Video-Player-SS].
 3. Right-click on the 'Embed URL' and copy it to your clipboard.
 4. Now go back to your Terminal / Command Prompt and write the following command:
-   1. `python youtube_dl/__main__.py --add-header "User-Agent: <Your User Agent>" "<Embed URL>"`
+   1. `python youtube_dl/__main__.py --add-header "User-Agent: Your User Agent Here" "Embed URL Here"`
    2. `<Your User Agent>` should be replaced with your actual user agent (which you can get from the beginning of this page).
    3. `<Embed URL>` should be replaced with the embed URL you just copied from the video player.
    4. **Full example**: `python youtube_dl/__main__.py --add-header "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0" "https://videos.sproutvideo.com/embed/9c12db1a048ed3c5/b2060375b95276c1?type=hd"`
@@ -129,7 +129,7 @@ Downloading multiple videos is not that much harder than downloading one video, 
 4. Repeat this for all videos, but make sure to place **each embed URL onto its own line**.
 5. Once you've pasted all the embed URLs into the `sprout.txt` text file, make sure to save it.
 6. Run the following command to download all the URLs in the `sprout.txt` text file:
-   1. `python youtube_dl/__main__.py --add-header "User-Agent: <Your User Agent>" -a sprout.txt`
+   1. `python youtube_dl/__main__.py --add-header "User-Agent: Your User Agent Here" -a sprout.txt`
    2. Note the `-a` before the `sprout.txt` filename.
    3. **Full example**: `python youtube_dl/__main__.py --add-header "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0" -a sprout.txt`
 7. The download should start. This will take a while, as it only downloads one video at a time.
