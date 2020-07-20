@@ -20,6 +20,7 @@ If you're here months later, then I can't guarantee that this method still works
     - [Userscript](#userscript)
   - [1. Getting the version of youtube-dl we need](#1-getting-the-version-of-youtube-dl-we-need)
   - [2. Testing if the project works (at all)](#2-testing-if-the-project-works-at-all)
+  - [2a. Installing `pycryptodome`](#2a-installing-pycryptodome)
   - [3. Downloading a video from Sproutvideo](#3-downloading-a-video-from-sproutvideo)
   - [4. Downloading multiple videos (via text file)](#4-downloading-multiple-videos-via-text-file)
   - [5. Edge cases: 403 Forbidden (Referer)](#5-edge-cases-403-forbidden-referer)
@@ -101,6 +102,25 @@ I highly recommend following a guide for installation for your operating system,
    1. It should output a version number/date: `2020.xx.xx`.
    2. At the time of writing it's: `2020.03.24`
 3. If neither of these gave you any weird error, we can assume they 'work' and move on.
+
+## 2a. Installing `pycryptodome`
+
+From my tests this seems to only be necessary on Python 3.x.  
+Without `pycryptodome`, you will eventually get an error that says:  
+> ERROR: pycrypto not found. Please install it.
+
+Keep in mind that we will be installing `pycryptodome` and NOT `pycrypto`. `pycryptodome` **replaces** `pycrypto`.
+
+1. Run `python -m pip install pycryptodome`
+2. If it installs without any errors, run the self-test to make sure it works correctly:
+   1. `python -m Crypto.SelfTest`
+3. The test should start and show a bunch of dots in your Terminal/Command Prompt. This will take a while, so just sit back and relax.
+4. Once it's complete, it should say something along the lines of:
+   ```
+   Ran 39510 tests in 113.395s
+   OK
+   ```
+5. If there were no errors during the self-test, then we can assume that it works correctly for our usage too.
 
 ## 3. Downloading a video from Sproutvideo
 
