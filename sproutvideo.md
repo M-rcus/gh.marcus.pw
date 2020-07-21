@@ -23,7 +23,9 @@ If you're here months later, then I can't guarantee that this method still works
   - [2a. Installing `pycryptodome`](#2a-installing-pycryptodome)
   - [3. Downloading a video from Sproutvideo](#3-downloading-a-video-from-sproutvideo)
   - [4. Downloading multiple videos (via text file)](#4-downloading-multiple-videos-via-text-file)
-  - [5. Edge cases: 403 Forbidden (Referer)](#5-edge-cases-403-forbidden-referer)
+  - [5. Edge cases](#5-edge-cases)
+    - [5a. 403 Forbidden (Referer)](#5a-403-forbidden-referer)
+    - [5b. 403 Forbidden (User Agent)](#5b-403-forbidden-user-agent)
   - [Finale](#finale)
 
 ## Requirements
@@ -154,7 +156,9 @@ Downloading multiple videos is not that much harder than downloading one video, 
    3. **Full example**: `python youtube_dl/__main__.py --add-header "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0" -a sprout.txt`
 7. The download should start. This will take a while, as it only downloads one video at a time.
 
-## 5. Edge cases: 403 Forbidden (Referer)
+## 5. Edge cases
+
+### 5a. 403 Forbidden (Referer)
 
 In some scenarios you may have videos that are give you a `403 Forbidden` error. These might only play if they are 'embedded' on the correct page.  
 The easiest way to test if this is the case, open the embed URL in a new tab **by copy/pasting** (NOT clicking) and see if you get this error:
@@ -164,6 +168,24 @@ The easiest way to test if this is the case, open the embed URL in a new tab **b
 If you have an error like this, the easiest is to include another flag with your command:  
 `--referer https://blah-blah-blah.vids.io/` - where the `https://blah-blah-blah.vids.io/` is the original URL where you copied the embed URL from.  
 Usually it's not necessary to include the full URL and you can do it similar to my example.
+
+### 5b. 403 Forbidden (User Agent)
+
+There are other cases where you'd also get a `403 Forbidden` error, where specifying a referer makes no difference.  
+Usually this is because the user agent, for whatever reason, has gotten banned.  
+The whole idea behind putting a custom user agent is to "blend in", as the 'download request' is supposed to look like a normal web browser streaming it.
+
+While I don't recommend doing this permanently, a temporary fix for these kind of videos, would be to specify a custom user agent.  
+You can either decide to be creative about it, or try to blend it by spoofing a different web browser.  
+Here are a few examples:
+
+- `--add-header "User-Agent: DontStopMeNow/1.0.0"`
+- `--add-header "User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"`
+  - Firefox v78 on Ubuntu Linux
+- `--add-header "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"`
+  - Brave/Chrome v84 on Ubuntu Linux
+- `--add-header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"`
+  - Firefox v78 on Windows
 
 ## Finale
 
